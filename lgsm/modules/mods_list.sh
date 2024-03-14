@@ -98,7 +98,6 @@ movementapilatestlink="https://github.com/danzayau/MovementAPI/releases/download
 metamodsource2version="2.0.0-git1284"
 metamodsource2latestfile="mmsource-${metamodsource2version}-linux.tar.gz"
 metamodsource2url="https://mms.alliedmods.net/mmsdrop/2.0/${metamodsource2latestfile}"
-metamodsource2download=$(wget "${metamodsource2url}" -q -O -)
 
 # Rust
 carbonrustapilatestfile="Carbon.Linux.Release.tar.gz"
@@ -164,7 +163,7 @@ mod_info_steamworks=(MOD "steamworks" "SteamWorks" "${steamworksurl}" "${steamwo
 mod_info_stripper=(MOD "stripper" "Stripper Source" "${stripperurl}" "${stripperlatestfile}" "0" "LowercaseOff" "${systemdir}" "addons/stripper/maps;" "ENGINES" "Counter-Strike: Global Offensive;Counter-Strike: Source;Day of Defeat: Source;Half Life: Deathmatch;Half Life 2: Deathmatch;Insurgency;Left 4 Dead;Left 4 Dead 2;Nuclear Dawn;Team Fortress 2;" "NOTGAMES" "http://www.bailopan.net/stripper/" "Add or remove objects from map (requires MetaMod)")
 
 # Source2 mods
-mod_info_metamodsource2=(MOD "metamodsource2" "Metamod: Source2 (Dev Build)" "${metamodsource2url}" "${metamodsource2download}" "0" "LowercaseOff" "${systemdir}" "addons/metamod/metaplugins.ini;" "source2" "Counter-Strike 2" "NOTGAMES" "https://www.sourcemm.net" "Plugins Framework")
+mod_info_metamodsource2=(MOD "metamodsource2" "Metamod: Source2 (Dev Build)" "${metamodsource2url}" "${metamodsource2latestfile}" "0" "LowercaseOff" "${systemdir}" "addons/metamod/metaplugins.ini;" "source2" "Counter-Strike 2" "NOTGAMES" "https://www.sourcemm.net" "Plugins Framework")
 
 # CS:GO Mods
 mod_info_gokz=(MOD "gokz" "GOKZ" "${gokzlatestlink}" "${gokzlatestfile}" "0" "LowercaseOff" "${systemdir}" "cfg;addons/sourcemod/configs;" "ENGINES" "Counter-Strike: Global Offensive;" "NOTGAMES" "https://github.com/KZGlobalTeam/gokz" "GOKZ ${gokzlatestversion} - Implements the KZ game mode (requires SourceMod and MetaMod)")
