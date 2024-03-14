@@ -143,7 +143,7 @@ fn_mod_tidy_files_list() {
 	fn_print_ok_eol_nl
 	# Sourcemod fix
 	# Remove metamod from sourcemod fileslist.
-	if [ "${modcommand}" == "sourcemod" ]; then
+	if [ "${modcommand}" == "sourcemod" ] || [ "${modcommand}" == "metamodsource2" ]; then
 		# Remove addons/metamod & addons/metamod/sourcemod.vdf from ${modcommand}-files.txt.
 		sed -i "/^addons\/metamod$/d" "${modsdir}/${modcommand}-files.txt"
 		sed -i "/^addons\/metamod\/sourcemod.vdf$/d" "${modsdir}/${modcommand}-files.txt"
