@@ -1,0 +1,2 @@
+# disable warning on symbols shellcheck sees as unused/unexported
+disable=SC2034
